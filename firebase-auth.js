@@ -185,6 +185,7 @@ function initCadastroExtra() {
 
     window.closeModal?.('modal-completar-cadastro');
     window.showToast?.(`Conta concluída, ${usuario.nome.split(' ')[0]}! ✅`, 'success');
+    window.usuarioLogado = usuario;
 
     if (window.App?.pendingProduct && typeof window.adicionarAoCarrinho === 'function') {
       const produto = window.App.pendingProduct;
@@ -219,6 +220,7 @@ onAuthStateChanged(auth, (user) => {
     if (usuario.cadastroCompleto) {
       window.closeModal?.('modal-login');
       window.closeModal?.('modal-completar-cadastro');
+      window.usuarioLogado = usuario;
     }
   } else {
     localStorage.removeItem('snapbite_user');
@@ -230,6 +232,7 @@ onAuthStateChanged(auth, (user) => {
 // Expõe globalmente para os botões do HTML chamarem
 window.loginComGoogleReal  = loginComGoogleReal;
 window.logoutFirebaseReal  = logoutFirebaseReal;
+
 
 document.addEventListener('DOMContentLoaded', () => {
   initCadastroExtra();
