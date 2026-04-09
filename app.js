@@ -598,7 +598,7 @@ async function enviarEmailPedidoConcluido(numeroPedido) {
     total,
   };
 
-  const resposta = await fetch('https://snapbite-pxn6.onrender.com', {
+  const resposta = await fetch('https://snapbite-pxn6.onrender.com/api/enviar-email-pedido', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
