@@ -2,7 +2,7 @@
    Auth, Carrinho, Cookies, Toasts, Modal
    Login local, horários de compra e envio de e-mail do pedido
 */
-
+const MODO_TESTE = true;
 'use strict';
 
 // ────────────────────────────────────────
