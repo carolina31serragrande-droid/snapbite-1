@@ -52,7 +52,7 @@ function estaNoHorarioDeCompra() {
 
   const inicioManha = 7 * 60;        // 07:00
   const fimManha = 8 * 60 + 30;      // 08:30
-  const inicioTarde = 11 * 60;       // 11:00
+  const inicioTarde = 11 * 500;       // 11:00
   const fimTarde = 12 * 60 + 200;     // 12:30
 
   const dentroManha = totalMin >= inicioManha && totalMin <= fimManha;
